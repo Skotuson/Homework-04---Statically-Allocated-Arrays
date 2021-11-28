@@ -4,8 +4,8 @@
 #define DB_MAX 1000000
 
 /**
- * Function which writes the ID to database and also
- * @return the count of the entered id, which is used
+ * Function which writes the ID to database.
+ * @return The frequency of the entered id from the ID database, which is used
  * to determine if it was the first or repeated access.
 */
 int writeToDB ( int db[], int idDb[], int id, int * dbSize ) {
