@@ -5,6 +5,10 @@
 
 /**
  * Function which writes the ID to database.
+ * @param db An array of all accesses
+ * @param idDb An array of all possible IDs and their count
+ * @param id The id which should be written into the database
+ * @param dbSize Output parameter with the number of acesses stored in db
  * @return The frequency of the entered id from the ID database, which is used
  * to determine if it was the first or repeated access.
 */
