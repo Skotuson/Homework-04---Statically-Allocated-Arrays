@@ -13,12 +13,12 @@
  * to determine if it was the first or repeated access.
 */
 int writeToDB ( int db[], int idDb[], int id, int * dbSize ) {
-    db[ ( *dbSize )++ ] = id;
-    return ++idDb[ id ];
+    db[( *dbSize )++] = id;
+    return ++idDb[id];
 }
 
 /**
- * Function which searches the database from and to a certain index
+ * Function which searches the database from and to certain index
  * and returns the number of unique acesses.
  * @param db An array of all accesses
  * @param from Lower bound of the search
@@ -26,10 +26,11 @@ int writeToDB ( int db[], int idDb[], int id, int * dbSize ) {
  * @param uniq Output parameter with the number of unique accesses
 */
 void searchDB( int db[], int from, int to, int * uniq ) {
-    char arr[ DB_MAX ] = {};
+    //Temporary array used to identify unique IDs
+    char arr[DB_MAX] = {};
     for ( int i = from; i <= to; i++ ){
         if ( !arr[ db[i] ] ) {
-            arr[ db[i] ] = 1;
+            arr[db[i]] = 1;
             *uniq += 1;
         }
     }
@@ -41,6 +42,7 @@ void searchDB( int db[], int from, int to, int * uniq ) {
  * @param db An array of all accesses
  * @param idDb An array of all possible IDs and their count.
  * @param dbSize Output parameter with the number of acesses stored in db
+ * @return 1 if the input was valid, 0 if the input was invalid
 */
 int handleRequest ( int db[], int idDb[], int * dbSize ) {
     char c;
@@ -73,8 +75,8 @@ int handleRequest ( int db[], int idDb[], int * dbSize ) {
 }
 
 int main ( void ) {
-    static int db[ DB_MAX ];
-    static int idDb[ ID_MAX ];
+    static int db[DB_MAX];
+    static int idDb[ID_MAX];
     int dbSize = 0;
     int r;
     printf("Pozadavky:\n");
