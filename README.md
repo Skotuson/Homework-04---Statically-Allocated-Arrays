@@ -4,7 +4,7 @@
 
 **Difficulty** => 4 / 10  
 **Estimated time** => 1.5 hours ( with bonus )    
-**Points** => 6.05 / 5
+**Points** => 6.05 / 5  
 **Notes** => Very simple problem 
 
 Original text in **czech** :  
