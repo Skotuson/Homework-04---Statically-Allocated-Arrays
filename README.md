@@ -54,5 +54,3 @@ Chybou je rovněž situace, kdy na vstupu není ani přidání přístupu ani do
 *> navsteva #2*  
 *? 0 6*  
 *> 5 / 7*  
-
-
